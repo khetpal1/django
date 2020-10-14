@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+<h1> Checkout Page</h1>
+{% if not billing_profile %}
+LOGIN
+{% include 'products/snippets/form.html' with form=login_form %}
+login and contnie as a guest
+<form action="{% url "gues_login" %}" method="POST">{% csrf_token %}
+  {{guest_email}}
+  <button>submit</button>
+</form>
+
+
+{% else %}
+
+Cart Total: {{i.Cart.Total}} <br>
+shipping Total: {{i.shipping_Total}} <br>
+Order Total: {{i.Total}} <br>
+{% endif %}
+{% endblock %}

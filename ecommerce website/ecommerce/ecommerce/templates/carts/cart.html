@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% block content %}
+{% if  cart.products.exists %}
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">SerialNumber</th>
+            <th scope="col">Product Name</th>
+            <th scope="col">Product Price</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for product in cart.products.all %}
+        <tr>
+            <th scope="row">{{forloop.counter}}</th>
+
+            <td><a href="{{Products.get_absoluet_url}}">{{product.title}}</a>
+                <form method="POST" action='{% url "cart:update" %}' class="form"> {% csrf_token %}
+                    <input type='hidden' name="product" value={{product.id}} />
+
+                    {% if product in cart.products.all  %}
+                    <button type='Submit' class=" btn-btn-link"> Remove?</button>
+                    {% else %}
+                    <button type="submit" class="btn-btn-link">Add to cart </button>
+                    {% endif %}
+
+                </form>
+            </td>
+            <td>{{product.price}}</td>
+        </tr>
+        {% endfor %}
+        <tr>
+            <td colspan="2"></td>
+            <td>{{cart.Total}} Total</td>
+        </tr>
+        <tr>
+            <td colspan="2"></td>
+            <td><a class="btn-btn-bg- success" href="{% url "cart:checkout" %}">Submit</a></td>
+        </tr>
+
+    </tbody>
+</table>
+
+{% else %}
+<p class="lead"> cart is empty </p>
+{%  endif %}
+{% endblock %}

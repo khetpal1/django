@@ -1,0 +1,31 @@
+{% extends "base.html" %} {% block content %} {% for obj in object %}
+<div class="container">
+  <div class="row">
+    <div class="col-12 Col-Md-6">
+      <h1>{{obj.title}}</h1>
+      <h1>{{obj.id}}</h1>
+      <h1>{{obj.timestamp}}</h1>
+      {{obj.title }}
+      {{obj.description|linebreaks}}
+      <!-- {% if obj.image %}
+      <img src="{{obj.image.url}}" />
+      {% endif %} -->
+      <form method="POST" action='{% url "cart:update" %}' class="form"> {% csrf_token %}
+        <input type='hidden' name="product" value={{obj.id}} />
+
+        {% if obj in cart.products.all  %}
+        in cart <button type='Submit' class=" btn-btn-link"> Remove?</button>
+        {% else %}
+        ADD TO CART<button type="submit" class="btn-btn-link">Add to cart </button>
+        {% endif %}
+
+      </form>
+
+      {% endfor %}
+
+    </div>
+  </div>
+
+</div>
+
+{% endblock %}
