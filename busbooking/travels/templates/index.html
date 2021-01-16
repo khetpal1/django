@@ -1,0 +1,465 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+	
+	{% block content %}
+	<!-- MAIN SLIDER ================================================== -->
+	<div class="mainSliderContainer">
+		<ul id="mainSlider" class="rslides rslides1">
+			<li id="rslides1_s0" class="first" style="display: block; float: none; position: absolute; opacity: 0; z-index: 1; transition: opacity 500ms ease-in-out 0s;">
+				<img src="{% static 'images/main-slider-1.png' %}" alt="">
+				<p class="caption">WHERE TO GO THIS SUMMER?</p>
+			</li>
+			<li id="rslides1_s1" class="rslides1_on" style="float: left; position: relative; opacity: 1; z-index: 2; display: list-item; transition: opacity 500ms ease-in-out 0s;">
+				<img src="{% static 'images/main-slider-2.png' %}" alt="">
+				<p class="caption">TRAVEL AROUND THE WORLD FROM $2360.00</p>
+			</li>
+			<li id="rslides1_s2" class="" style="float: none; position: absolute; opacity: 0; z-index: 1; display: list-item; transition: opacity 500ms ease-in-out 0s;">
+				<img src="{% static 'images/main-slider-1.png' %}" alt="">
+			</li>
+			<li id="rslides1_s3" class="last" style="float: none; position: absolute; opacity: 0; z-index: 1; display: list-item; transition: opacity 500ms ease-in-out 0s;">
+				<img src="{% static 'images/main-slider-2.png' %}" alt="">
+			</li>
+		</ul><!-- /mainSlider -->
+		<div class="mainSliderNav"><a href="#" class="rslides_nav rslides1_nav prev">Previous</a><a href="#" class="rslides_nav rslides1_nav next">Next</a></div>
+		
+		<!-- BOOKING TABS and FORMS ================================================== -->
+		<div class="bookingTabsContainer">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-6 col-md-7 col-sm-9 col-xs-12 bookingTabsCol">
+						<div id="bookingTabs" style="display: block; width: 100%; margin: 0px;">          
+							<ul class="resp-tabs-list clearfix">
+								<li class="flights resp-tab-item first resp-tab-active" aria-controls="tab_item-0" role="tab"><span>FLIGHTS</span></li>
+								<li class="hotels resp-tab-item" aria-controls="tab_item-1" role="tab"><span>HOTELS</span></li>
+								<li class="cars resp-tab-item" aria-controls="tab_item-2" role="tab"><span>CARS</span></li>
+								<li class="cruise resp-tab-item last" aria-controls="tab_item-3" role="tab"><span>CRUISE</span></li>
+							</ul> 
+
+							<div class="resp-tabs-container">                                                        
+								<h2 class="resp-accordion resp-tab-active" role="tab" aria-controls="tab_item-0"><span class="resp-arrow"></span>FLIGHTS</h2><div class="resp-tab-content resp-tab-content-active" aria-labelledby="tab_item-0" style="display:block">
+									<form id="flightBooking" class="generalForm bookingForm" action="#" method="post" novalidate="novalidate" style="display: none;">
+										<div class="row">
+											<div class="col-sm-7">
+												<label>Leaving From <span>*</span></label>
+												<input type="text" name="leaving_from" class="required valid"><span for="leaving_from" generated="true" class="error" style="display: none;">This field is required.</span>
+											</div>
+											<div class="col-sm-5 datePickContainer">
+												<label>Departing on <span>*</span></label>
+												<input type="text" name="departing_on" class="required datePick hasDatepick valid"><span for="departing_on" generated="true" class="error" style="display: none;">This field is required.</span>
+												<img class="datePickImg" alt="date picker" src="{% static 'images/calendar.png' %}">
+											</div>
+											<div class="col-sm-7">
+												<label>Going to <span>*</span></label>
+												<input type="text" name="going_to" class="required valid"><span for="going_to" generated="true" class="error" style="display: none;">This field is required.</span>
+											</div>
+											<div class="col-sm-5">
+												<label>Arriving on <span>*</span></label>
+												<input type="text" name="arriving_on" class="required datePick hasDatepick valid"><span for="arriving_on" generated="true" class="error" style="display: none;">This field is required.</span>
+												<img class="datePickImg" alt="date picker" src="{% static 'images/calendar.png' %}">
+											</div>
+											<div class="col-sm-7">
+												<div class="row">
+													<div class="col-sm-4 pRel">
+														<label>Adults <span>*</span></label>
+														<select name="adults" class="customSelectInput required hasCustomSelect valid" style="appearance: menulist-button; width: 82px; position: absolute; opacity: 0; height: 31px; font-size: 13px;">
+															<option value="00">00</option>
+															<option value="01">01</option>
+															<option value="02">02</option>
+															<option value="03">03</option>
+															<option value="04">04</option>
+															<option value="05">05</option>
+														</select><span class="customSelect customSelectInput required" style="display: inline-block;"><span class="customSelectInner" style="width: 62px; display: inline-block;">00</span></span>
+													</div>
+													<div class="col-sm-4 pRel">
+														<label>Children <span>*</span></label>
+														<select name="children" class="customSelectInput required hasCustomSelect valid" style="appearance: menulist-button; width: 82px; position: absolute; opacity: 0; height: 31px; font-size: 13px;">
+															<option value="00">00</option>
+															<option value="01">01</option>
+															<option value="02">02</option>
+															<option value="03">03</option>
+															<option value="04">04</option>
+															<option value="05">05</option>
+														</select><span class="customSelect customSelectInput required" style="display: inline-block;"><span class="customSelectInner" style="width: 62px; display: inline-block;">00</span></span>
+													</div>
+													<div class="col-sm-4 pRel">
+														<label>Senior <span>*</span></label>
+														<select name="senior" class="customSelectInput required hasCustomSelect valid" style="appearance: menulist-button; width: 82px; position: absolute; opacity: 0; height: 31px; font-size: 13px;">
+															<option value="00">00</option>
+															<option value="01">01</option>
+															<option value="02">02</option>
+															<option value="03">03</option>
+															<option value="04">04</option>
+															<option value="05">05</option>
+														</select><span class="customSelect customSelectInput required" style="display: inline-block;"><span class="customSelectInner" style="width: 62px; display: inline-block;">00</span></span>
+													</div>
+												</div>
+											</div>
+											<div class="col-sm-5">
+												<input type="submit" name="submit" value="SEARCH">
+											</div>
+										</div>
+									</form>
+								</div><!-- /flights -->
+								<h2 class="resp-accordion" role="tab" aria-controls="tab_item-1"><span class="resp-arrow"></span>HOTELS</h2><div class="resp-tab-content" aria-labelledby="tab_item-1">
+									<form id="hotelBooking" class="generalForm bookingForm" action="#" method="post" novalidate="novalidate">
+										<div class="row">
+											<div class="col-sm-7">
+												<label>Leaving From <span>*</span></label>
+												<input type="text" name="leaving_from" class="required">
+											</div>
+											<div class="col-sm-5 datePickContainer">
+												<label>Departing on <span>*</span></label>
+												<input type="text" name="departing_on" class="required datePick hasDatepick">
+												<img class="datePickImg" alt="date picker" src="{% static 'images/calendar.png' %}">
+											</div>
+											<div class="col-sm-7">
+												<label>Going to <span>*</span></label>
+												<input type="text" name="going_to" class="required">
+											</div>
+											<div class="col-sm-5">
+												<label>Arriving on <span>*</span></label>
+												<input type="text" name="arriving_on" class="required datePick hasDatepick">
+												<img class="datePickImg" alt="date picker" src="{% static 'images/calendar.png' %}">
+											</div>
+											<div class="col-sm-7">
+												<div class="row">
+													<div class="col-sm-4 pRel">
+														<label>Adults <span>*</span></label>
+														<select name="adults" class="customSelectInput required hasCustomSelect" style="appearance: menulist-button; width: 100px; position: absolute; opacity: 0; height: 0px; font-size: 13px;">
+															<option value="00">00</option>
+															<option value="01">01</option>
+															<option value="02">02</option>
+															<option value="03">03</option>
+															<option value="04">04</option>
+															<option value="05">05</option>
+														</select><span class="customSelect customSelectInput required" style="display: inline-block;"><span class="customSelectInner" style="width: 90px; display: inline-block;">00</span></span>
+													</div>
+													<div class="col-sm-4 pRel">
+														<label>Children <span>*</span></label>
+														<select name="children" class="customSelectInput required hasCustomSelect" style="appearance: menulist-button; width: 100px; position: absolute; opacity: 0; height: 0px; font-size: 13px;">
+															<option value="00">00</option>
+															<option value="01">01</option>
+															<option value="02">02</option>
+															<option value="03">03</option>
+															<option value="04">04</option>
+															<option value="05">05</option>
+														</select><span class="customSelect customSelectInput required" style="display: inline-block;"><span class="customSelectInner" style="width: 90px; display: inline-block;">00</span></span>
+													</div>
+													<div class="col-sm-4 pRel">
+														<label>Senior <span>*</span></label>
+														<select name="senior" class="customSelectInput required hasCustomSelect" style="appearance: menulist-button; width: 100px; position: absolute; opacity: 0; height: 0px; font-size: 13px;">
+															<option value="00">00</option>
+															<option value="01">01</option>
+															<option value="02">02</option>
+															<option value="03">03</option>
+															<option value="04">04</option>
+															<option value="05">05</option>
+														</select><span class="customSelect customSelectInput required" style="display: inline-block;"><span class="customSelectInner" style="width: 90px; display: inline-block;">00</span></span>
+													</div>
+												</div>
+											</div>
+											<div class="col-sm-5">
+												<input type="submit" name="submit" value="SEARCH">
+											</div>
+										</div>
+									</form>
+								</div><!-- /hotels -->
+								<h2 class="resp-accordion" role="tab" aria-controls="tab_item-2"><span class="resp-arrow"></span>CARS</h2><div class="resp-tab-content" aria-labelledby="tab_item-2">
+									<form id="carsBooking" class="generalForm bookingForm" action="#" method="post" novalidate="novalidate">
+										<div class="row">
+											<div class="col-sm-7">
+												<label>Leaving From <span>*</span></label>
+												<input type="text" name="leaving_from" class="required">
+											</div>
+											<div class="col-sm-5 datePickContainer">
+												<label>Departing on <span>*</span></label>
+												<input type="text" name="departing_on" class="required datePick hasDatepick">
+												<img class="datePickImg" alt="date picker" src="{% static 'images/calendar.png' %}">
+											</div>
+											<div class="col-sm-7">
+												<label>Going to <span>*</span></label>
+												<input type="text" name="going_to" class="required">
+											</div>
+											<div class="col-sm-5">
+												<label>Arriving on <span>*</span></label>
+												<input type="text" name="arriving_on" class="required datePick hasDatepick">
+												<img class="datePickImg" alt="date picker" src="{% static 'images/calendar.png' %}">
+											</div>
+											<div class="col-sm-7">
+												<div class="row">
+													<div class="col-sm-4 pRel">
+														<label>Adults <span>*</span></label>
+														<select name="adults" class="customSelectInput required hasCustomSelect" style="appearance: menulist-button; width: 100px; position: absolute; opacity: 0; height: 0px; font-size: 13px;">
+															<option value="00">00</option>
+															<option value="01">01</option>
+															<option value="02">02</option>
+															<option value="03">03</option>
+															<option value="04">04</option>
+															<option value="05">05</option>
+														</select><span class="customSelect customSelectInput required" style="display: inline-block;"><span class="customSelectInner" style="width: 90px; display: inline-block;">00</span></span>
+													</div>
+													<div class="col-sm-4 pRel">
+														<label>Children <span>*</span></label>
+														<select name="children" class="customSelectInput required hasCustomSelect" style="appearance: menulist-button; width: 100px; position: absolute; opacity: 0; height: 0px; font-size: 13px;">
+															<option value="00">00</option>
+															<option value="01">01</option>
+															<option value="02">02</option>
+															<option value="03">03</option>
+															<option value="04">04</option>
+															<option value="05">05</option>
+														</select><span class="customSelect customSelectInput required" style="display: inline-block;"><span class="customSelectInner" style="width: 90px; display: inline-block;">00</span></span>
+													</div>
+													<div class="col-sm-4 pRel">
+														<label>Senior <span>*</span></label>
+														<select name="senior" class="customSelectInput required hasCustomSelect" style="appearance: menulist-button; width: 100px; position: absolute; opacity: 0; height: 0px; font-size: 13px;">
+															<option value="00">00</option>
+															<option value="01">01</option>
+															<option value="02">02</option>
+															<option value="03">03</option>
+															<option value="04">04</option>
+															<option value="05">05</option>
+														</select><span class="customSelect customSelectInput required" style="display: inline-block;"><span class="customSelectInner" style="width: 90px; display: inline-block;">00</span></span>
+													</div>
+												</div>
+											</div>
+											<div class="col-sm-5">
+												<input type="submit" name="submit" value="SEARCH">
+											</div>
+										</div>
+									</form>
+								</div><!-- /cars -->
+								<h2 class="resp-accordion" role="tab" aria-controls="tab_item-3"><span class="resp-arrow"></span>CRUISE</h2><div class="resp-tab-content" aria-labelledby="tab_item-3">
+									<form id="cruiseBooking" class="generalForm bookingForm" action="#" method="post" novalidate="novalidate">
+										<div class="row">
+											<div class="col-sm-7">
+												<label>Leaving From <span>*</span></label>
+												<input type="text" name="leaving_from" class="required">
+											</div>
+											<div class="col-sm-5 datePickContainer">
+												<label>Departing on <span>*</span></label>
+												<input type="text" name="departing_on" class="required datePick hasDatepick">
+												<img class="datePickImg" alt="date picker" src="{% static 'images/calendar.png' %}">
+											</div>
+											<div class="col-sm-7">
+												<label>Going to <span>*</span></label>
+												<input type="text" name="going_to" class="required">
+											</div>
+											<div class="col-sm-5">
+												<label>Arriving on <span>*</span></label>
+												<input type="text" name="arriving_on" class="required datePick hasDatepick">
+												<img class="datePickImg" alt="date picker" src="{% static 'images/calendar.png' %}">
+											</div>
+											<div class="col-sm-7">
+												<div class="row">
+													<div class="col-sm-4 pRel">
+														<label>Adults <span>*</span></label>
+														<select name="adults" class="customSelectInput required hasCustomSelect" style="appearance: menulist-button; width: 100px; position: absolute; opacity: 0; height: 0px; font-size: 13px;">
+															<option value="00">00</option>
+															<option value="01">01</option>
+															<option value="02">02</option>
+															<option value="03">03</option>
+															<option value="04">04</option>
+															<option value="05">05</option>
+														</select><span class="customSelect customSelectInput required" style="display: inline-block;"><span class="customSelectInner" style="width: 90px; display: inline-block;">00</span></span>
+													</div>
+													<div class="col-sm-4 pRel">
+														<label>Children <span>*</span></label>
+														<select name="children" class="customSelectInput required hasCustomSelect" style="appearance: menulist-button; width: 100px; position: absolute; opacity: 0; height: 0px; font-size: 13px;">
+															<option value="00">00</option>
+															<option value="01">01</option>
+															<option value="02">02</option>
+															<option value="03">03</option>
+															<option value="04">04</option>
+															<option value="05">05</option>
+														</select><span class="customSelect customSelectInput required" style="display: inline-block;"><span class="customSelectInner" style="width: 90px; display: inline-block;">00</span></span>
+													</div>
+													<div class="col-sm-4 pRel">
+														<label>Senior <span>*</span></label>
+														<select name="senior" class="customSelectInput required hasCustomSelect" style="appearance: menulist-button; width: 100px; position: absolute; opacity: 0; height: 0px; font-size: 13px;">
+															<option value="00">00</option>
+															<option value="01">01</option>
+															<option value="02">02</option>
+															<option value="03">03</option>
+															<option value="04">04</option>
+															<option value="05">05</option>
+														</select><span class="customSelect customSelectInput required" style="display: inline-block;"><span class="customSelectInner" style="width: 90px; display: inline-block;">00</span></span>
+													</div>
+												</div>
+											</div>
+											<div class="col-sm-5">
+												<input type="submit" name="submit" value="SEARCH">
+											</div>
+										</div>
+									</form>
+								</div><!-- /cruise -->
+							</div>
+						</div><!-- /bookingTabs -->
+					</div><!-- /col -->
+				</div><!-- /row -->
+			</div><!-- /container -->
+		</div><!-- /bookingTabsContainer -->
+		
+		<!-- SHORT OFFERS ================================================== -->
+		<div class="shortOffers">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-3">
+						<a href="#" title="" class="shortOffer clearfix">
+							<div class="title"><h5>MEXICO</h5><h5>NORTH AMERICA</h5></div>
+							<div class="price"><span>From</span><em>$350</em></div>
+						</a><!-- /shortOffer -->
+					</div><!-- /col -->
+					<div class="col-sm-3">
+						<a href="#" title="" class="shortOffer clearfix">
+							<div class="title"><h5>HA LONG BAY</h5><h5>VIETNAM</h5></div>
+							<div class="price"><span>From</span><em>$250</em></div>
+						</a><!-- /shortOffer -->
+					</div><!-- /col -->
+					<div class="col-sm-3">
+						<a href="#" title="" class="shortOffer clearfix">
+							<div class="title"><h5>PATTAYA</h5><h5>THAILAND</h5></div>
+							<div class="price"><span>From</span><em>$600</em></div>
+						</a><!-- /shortOffer -->
+					</div><!-- /col -->
+					<div class="col-sm-3">
+						<a href="#" title="" class="shortOffer clearfix">
+							<div class="title"><h5>BASTIA BEACH</h5><h5>FRANCE</h5></div>
+							<div class="price"><span>From</span><em>$450</em></div>
+						</a><!-- /shortOffer -->
+					</div><!-- /col -->
+				</div><!-- /row -->
+			</div><!-- /container -->
+		</div><!-- /shortOffers -->
+		
+	</div><!-- /mainSliderContainer -->
+	
+	
+	<!-- MAIN CONTENT ================================================== -->
+	<div class="container">
+		
+		<!-- SPECIAL OFFERS ================================================== -->
+		<div class="row">
+			<div class="innerTitle"><h2>SPECIAL <span>OFFER</span></h2></div>		
+			<div id="specialOffers" class="offers owl-carousel owl-theme" style="opacity: 1; display: block;">
+				<div class="owl-wrapper-outer"><div class="owl-wrapper" style="width: 4680px; left: 0px; display: block; transition: all 800ms ease 0s; transform: translate3d(-390px, 0px, 0px);"><div class="owl-item" style="width: 390px;"><a href="#" class="item">
+					<img src="{% static 'images/sp-offer-1.png' %}" alt="special offer">
+					<span>KERAMA ISLANDS</span>
+					<div class="priceTag"><em>Fr</em> $350</div>
+				</a></div><div class="owl-item" style="width: 390px;"><a href="#" class="item">
+					<img src="{% static 'images/sp-offer-2.png' %}" alt="special offer">
+					<span>MAE SURIN WATERFALL</span>
+					<div class="priceTag"><em>Fr</em> $350</div>
+				</a></div><div class="owl-item" style="width: 390px;"><a href="#" class="item">
+					<img src="{% static 'images/sp-offer-3.png' %}" alt="special offer">
+					<span>ABERYSTWYTH BEACH</span>
+					<div class="priceTag"><em>Fr</em> $350</div>
+				</a></div><div class="owl-item" style="width: 390px;"><a href="#" class="item">
+					<img src="{% static 'images/sp-offer-1.png' %}" alt="special offer">
+					<span>KERAMA ISLANDS</span>
+					<div class="priceTag"><em>Fr</em> $350</div>
+				</a></div><div class="owl-item" style="width: 390px;"><a href="#" class="item">
+					<img src="{% static 'images/sp-offer-2.png' %}" alt="special offer">
+					<span>MAE SURIN WATERFALL</span>
+					<div class="priceTag"><em>Fr</em> $350</div>
+				</a></div><div class="owl-item" style="width: 390px;"><a href="#" class="item">
+					<img src="{% static 'images/sp-offer-3.png' %}" alt="special offer">
+					<span>ABERYSTWYTH BEACH</span>
+					<div class="priceTag"><em>Fr</em> $350</div>
+				</a></div></div></div>
+				
+				
+				
+				
+				
+			<div class="owl-controls clickable"><div class="owl-buttons"><div class="owl-prev">prev</div><div class="owl-next">next</div></div></div></div><!-- /specialOffers -->
+		</div><!-- /row -->
+		
+		
+		<div class="row">
+			<div class="col-sm-8">
+				<!-- FEATURED OFFERS ================================================== -->
+				<div class="row">
+					<div class="innerTitle"><h2>FEATURED <span>OFFER</span></h2></div>	
+					<div class="featuredOffers offers">
+						<div class="col-sm-4">
+							<a href="#" class="item">
+								<img src="{% static 'images/ft-offer-1.png' %}" alt="special offer">
+								<span>MALAWI NATIONAL PARK</span>
+								<div class="priceTag"><em>Fr</em> $350</div>
+							</a>
+						</div><!-- /col -->
+						<div class="col-sm-4">
+							<a href="#" class="item">
+								<img src="{% static 'images/ft-offer-2.png' %}" alt="special offer">
+								<span>MALAWI NATIONAL PARK</span>
+								<div class="priceTag"><em>Fr</em> $350</div>
+							</a>
+						</div><!-- /col -->
+						<div class="col-sm-4">
+							<a href="#" class="item">
+								<img src="{% static 'images/ft-offer-3.png' %}" alt="special offer">
+								<span>MALAWI NATIONAL PARK</span>
+								<div class="priceTag"><em>Fr</em> $350</div>
+							</a>
+						</div><!-- /col -->
+						<div class="col-sm-4">
+							<a href="#" class="item">
+								<img src="{% static 'images/ft-offer-4.png' %}" alt="special offer">
+								<span>MALAWI NATIONAL PARK</span>
+								<div class="priceTag"><em>Fr</em> $350</div>
+							</a>
+						</div><!-- /col -->
+						<div class="col-sm-4">
+							<a href="#" class="item">
+								<img src="{% static 'images/ft-offer-5.png' %}" alt="special offer">
+								<span>MALAWI NATIONAL PARK</span>
+								<div class="priceTag"><em>Fr</em> $350</div>
+							</a>
+						</div><!-- /col -->
+						<div class="col-sm-4">
+							<a href="#" class="item">
+								<img src="{% static 'images/ft-offer-6.png' %}" alt="special offer">
+								<span>MALAWI NATIONAL PARK</span>
+								<div class="priceTag"><em>Fr</em> $350</div>
+							</a>
+						</div><!-- /col -->
+					</div><!-- /featuredOffers -->
+				</div><!-- /row -->
+			</div><!-- /col -->
+			<div class="col-sm-4">
+				<!-- LATEST NEWS ================================================== -->
+				<div class="innerTitle"><h2>LATEST <span>NEWS</span></h2></div>
+				<p class="black">Lorem ipsum dolor ipsum dolor.</p>
+				<div class="newsList">
+					<ul>
+						<li class="first"><a href="#" title="">Lorem ipsum dolor ipsum dolor. Lorem ipsum dolor ipsum dolor. Lorem ipsum dolor ipsum dolor.</a></li>
+						<li><a href="#" title="">Lorem ipsum dolor ipsum dolor.</a></li>
+						<li class="last"><a href="#" title="">Lorem ipsum dolor ipsum dolor. Lorem ipsum dolor ipsum dolor. Lorem ipsum dolor ipsum dolor.</a></li>
+					</ul>
+				</div><!-- /newsList -->
+				<!-- BOTTOM SLIDER ================================================== -->
+				<div class="bottomSliderContainer">
+					<ul id="bottomSlider" class="rslides rslides2">
+						<li id="rslides2_s0" class="first rslides2_on" style="display: block; float: left; position: relative; opacity: 1; z-index: 2; transition: opacity 500ms ease-in-out 0s;">
+							<img src="{% static 'images/bottom-slider-1.png' %}" alt="">
+							<p class="caption">VISIT TO JAPEN IN THIS SUMMER</p>
+						</li>
+						<li id="rslides2_s1" class="last" style="float: none; position: absolute; opacity: 0; z-index: 1; display: list-item; transition: opacity 500ms ease-in-out 0s;">
+							<img src="{% static 'images/bottom-slider-1.png' %}" alt="">
+							<p class="caption">VISIT TO JAPEN IN THIS SUMMER</p>
+						</li>
+					</ul><!-- /bottomSlider -->
+					<div class="bottomSliderNav"><a href="#" class="rslides_nav rslides2_nav prev">Previous</a><a href="#" class="rslides_nav rslides2_nav next">Next</a></div>
+				</div><!-- /bottomSliderContainer -->
+			</div><!-- /col -->
+		</div><!-- /row -->
+		
+	</div><!-- /container -->
+	{% endblock content %}
+		
+		
+	
+
+	

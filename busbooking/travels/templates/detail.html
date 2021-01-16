@@ -1,0 +1,249 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+	
+	{% block content %}
+	<!-- MAIN CONTENT ================================================== -->
+	<div class="container">
+		
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="breadcrumb clearfix">
+					<ul>
+						<li class="first"><a href="http://travelbookingtemplate.free.bg/vacation-detail.html#" title="Home">Home</a></li>
+						<li>/</li>
+						<li class="active last">Vacations Detail</li>
+					</ul>
+				</div><!-- /breadcrumb -->
+			</div><!-- /col -->
+		</div><!-- /row -->
+		
+		<div class="row">
+			<!-- SIDEBAR ================================================== -->
+			<div class="col-sm-3">
+				<div class="vacationFilterContainer">
+					<form class="generalForm" id="sidebarBook" action="http://travelbookingtemplate.free.bg/vacation-detail.html#" method="POST">
+						<div class="row">
+							<div class="col-sm-12"><h6>SHERATON HOTEL</h6></div>
+							<div class="col-sm-12 col-md-12 col-lg-6"><div class="ratingDisabled" data-average="3" data-id="1" style="height: 10px; width: 60px; overflow: hidden; z-index: 1; position: relative;"><div class="jRatingColor" style="width: 36px;"></div><div class="jRatingAverage" style="width: 0px; top: -10px;"></div><div class="jStar" style="width: 60px; height: 10px; top: -20px; background: url(&quot;assets/images/rating-small.png' %}&quot;) repeat-x;"></div></div></div>
+							<div class="col-sm-12 col-md-12 col-lg-6">Hanoi - Vietnam</div>
+						</div><!-- /row -->
+						<div class="row">
+							<div class="col-sm-12 col-md-12 col-lg-6">
+								<label>Check in <span>*</span></label>
+								<input type="text" name="check_in" class="required datePick hasDatepick">
+							</div>
+							<div class="col-sm-12 col-md-12 col-lg-6">
+								<label>Check out <span>*</span></label>
+								<input type="text" name="check_out" class="required datePick hasDatepick">
+							</div>
+							<div class="col-sm-12"><p>Lorem ipsum dolor sit saelas met, consas ect tur ads ipi deese cing elit....</p></div>
+						</div><!-- /row -->
+						<div class="row">
+							<div class="col-sm-12 col-md-12 col-lg-6 checkFilter clearfix">
+								<div class="customCheck styledCheckbox" style="background-image: url(&quot;assets/images/checkbox.png' %}&quot;); width: 15px; height: 13px; cursor: pointer; background-position: 0px 0px;"><input type="checkbox" class="customCheck" name="room" value="Single room" style="display: none;"></div> <span>Single room</span>
+							</div>
+							<div class="col-sm-12 col-md-12 col-lg-6 clearfix">
+								<div class="roomPrice clearfix">
+									<span>$360</span>
+									<em>/ night</em>
+								</div>
+							</div>
+							<div class="col-sm-12 col-md-12 col-lg-6 checkFilter clearfix">
+								<div class="customCheck marginBottom0 styledCheckbox" style="background-image: url(&quot;assets/images/checkbox.png' %}&quot;); width: 15px; height: 13px; cursor: pointer; background-position: 0px 0px;"><input type="checkbox" class="customCheck marginBottom0" name="room" value="Double room" style="display: none;"></div> <span>Double room</span>
+							</div>
+							<div class="col-sm-12 col-md-12 col-lg-6 clearfix">
+								<div class="roomPrice clearfix marginBottom0">
+									<span>$560</span>
+									<em>/ night</em>
+								</div>
+							</div>
+						</div><!-- /row -->
+						<div class="row">
+							<div class="col-sm-12 col-md-12 col-lg-4 pRel">
+								<label>Rooms <span>*</span></label>
+								<select name="rooms" class="customSelectInput required hasCustomSelect" style="appearance: menulist-button; width: 54px; position: absolute; opacity: 0; height: 31px; font-size: 13px;">
+									<option value="01">01</option>
+									<option value="02">02</option>
+									<option value="03">03</option>
+									<option value="04">04</option>
+									<option value="05">05</option>
+								</select><span class="customSelect customSelectInput required" style="display: inline-block;"><span class="customSelectInner" style="width: 28px; display: inline-block;">01</span></span>
+							</div>
+							<div class="col-sm-12 col-md-12 col-lg-4 pRel">
+								<label>Adults <span>*</span></label>
+								<select name="adults" class="customSelectInput required hasCustomSelect" style="appearance: menulist-button; width: 54px; position: absolute; opacity: 0; height: 31px; font-size: 13px;">
+									<option value="01">01</option>
+									<option value="02">02</option>
+									<option value="03">03</option>
+									<option value="04">04</option>
+									<option value="05">05</option>
+								</select><span class="customSelect customSelectInput required" style="display: inline-block;"><span class="customSelectInner" style="width: 28px; display: inline-block;">01</span></span>
+							</div>
+							<div class="col-sm-12 col-md-12 col-lg-4 pRel">
+								<label>Child <span>*</span></label>
+								<select name="child" class="customSelectInput required hasCustomSelect" style="appearance: menulist-button; width: 54px; position: absolute; opacity: 0; height: 31px; font-size: 13px;">
+									<option value="01">01</option>
+									<option value="02">02</option>
+									<option value="03">03</option>
+									<option value="04">04</option>
+									<option value="05">05</option>
+								</select><span class="customSelect customSelectInput required" style="display: inline-block;"><span class="customSelectInner" style="width: 28px; display: inline-block;">01</span></span>
+							</div>
+						</div><!-- /row -->
+						<div class="row">
+							<div class="col-sm-12 col-md-12 col-lg-6"><p class="totalTitle">Total Booking</p></div>
+							<div class="col-sm-12 col-md-12 col-lg-6"><p class="totalPrice"><span>$</span>720</p></div>
+						</div><!-- /row -->
+						<div class="row">
+							<div class="col-sm-12 col-md-12 col-lg-6"><input type="submit" name="submit" value="BOOK NOW"></div>
+						</div><!-- /row -->
+					</form><!-- /sidebarBook -->
+					
+					<div class="filter">
+						<h5 class="active">NEED HELP BOOKING</h5>
+						<div class="filterInner" style="display: block;">
+							<div class="col-sm-12"><p>Lorem ipsum dolor sit saelas metscon sas ect tur ads ipi deese.....</p></div>
+							<div class="col-sm-12"><a class="hotelPhone" href="tel:+8488886868" title="Booking phone">(+84) 888 86868</a></div>
+						</div><!-- /filterInner -->
+					</div><!-- /filter -->
+					
+					<div class="filter">
+						<h5 class="active">HOT DEAL TODAY</h5>
+						<div class="filterInner" style="display: block;">
+							<div class="row hotDeal">
+								<div class="col-sm-12 col-md-12 col-lg-4"><img src="{% static 'images/deal-1.png' %}" alt="hot deal"></div>
+								<div class="col col-sm-12 col-md-12 col-lg-8">
+									<p>Visit to Syria</p>
+									<div class="ratingDisabled" data-average="5" data-id="1" style="height: 10px; width: 60px; overflow: hidden; z-index: 1; position: relative;"><div class="jRatingColor" style="width: 60px;"></div><div class="jRatingAverage" style="width: 0px; top: -10px;"></div><div class="jStar" style="width: 60px; height: 10px; top: -20px; background: url(&quot;assets/images/rating-small.png' %}&quot;) repeat-x;"></div></div>
+								</div>
+							</div><!-- /hotDeal -->
+							<div class="row hotDeal">
+								<div class="col-sm-12 col-md-12 col-lg-4"><img src="{% static 'images/deal-2.png' %}" alt="hot deal"></div>
+								<div class="col col-sm-12 col-md-12 col-lg-8">
+									<p>Travel to Hanoi - Vietnam</p>
+									<div class="ratingDisabled" data-average="3" data-id="1" style="height: 10px; width: 60px; overflow: hidden; z-index: 1; position: relative;"><div class="jRatingColor" style="width: 36px;"></div><div class="jRatingAverage" style="width: 0px; top: -10px;"></div><div class="jStar" style="width: 60px; height: 10px; top: -20px; background: url(&quot;assets/images/rating-small.png' %}&quot;) repeat-x;"></div></div>
+								</div>
+							</div><!-- /hotDeal -->
+							<div class="row hotDeal">
+								<div class="col-sm-12 col-md-12 col-lg-4"><img src="{% static 'images/deal-3.png' %}" alt="hot deal"></div>
+								<div class="col col-sm-12 col-md-12 col-lg-8">
+									<p>Seraton hotel Singapore</p>
+									<div class="ratingDisabled" data-average="4" data-id="1" style="height: 10px; width: 60px; overflow: hidden; z-index: 1; position: relative;"><div class="jRatingColor" style="width: 48px;"></div><div class="jRatingAverage" style="width: 0px; top: -10px;"></div><div class="jStar" style="width: 60px; height: 10px; top: -20px; background: url(&quot;assets/images/rating-small.png' %}&quot;) repeat-x;"></div></div>
+								</div>
+							</div><!-- /hotDeal -->
+						</div><!-- /filterInner -->
+					</div><!-- /filter -->
+					
+				</div><!-- /vacationFilterContainer -->
+			</div><!-- /col -->
+			<!-- VACATIONS ================================================== -->
+			<div class="col-sm-9">
+				<div class="pRev">
+					<ul id="detailSlider" class="rslides rslides1">
+						<li id="rslides1_s0" class="first rslides1_on" style="display: block; float: left; position: relative; opacity: 1; z-index: 2; transition: opacity 500ms ease-in-out 0s;">
+							<img src="{% static 'images/detail-1.jpg" alt="">
+							<p class="caption">
+								<span class="fontSlim">Get Away For The Weekend</span>
+								<span class="fontBig">Caerfal Beach</span>
+								<span class="fontSmall">Special from $200.00</span>
+							</p>
+						</li>
+						<li id="rslides1_s1" class="last" style="float: none; position: absolute; opacity: 0; z-index: 1; display: list-item; transition: opacity 500ms ease-in-out 0s;">
+							<img src="{% static 'images/detail-2.jpg" alt="">
+							<p class="caption capBottom"><span class="fontSmall">TRAVEL AROUND THE WORLD!!!</span></p>
+						</li>
+					</ul><!-- /mainSlider -->
+					<div class="detailSliderNav"><ul class="rslides_tabs rslides1_tabs"><li class="rslides1_s1 first rslides_here"><a href="http://travelbookingtemplate.free.bg/vacation-detail.html#" class="rslides1_s1">1</a></li><li class="rslides1_s2 last"><a href="http://travelbookingtemplate.free.bg/vacation-detail.html#" class="rslides1_s2">2</a></li></ul></div>
+				</div>
+				
+				 <div id="detailTab" style="display: block; width: 100%; margin: 0px;">          
+					<ul class="resp-tabs-list clearfix">
+						<li class="resp-tab-item resp-tab-active first" aria-controls="tab_item-0" role="tab"><span>OVERVIEW</span></li>
+						<li class="resp-tab-item" aria-controls="tab_item-1" role="tab"><span>FACILITIES</span></li>
+						<li class="resp-tab-item" aria-controls="tab_item-2" role="tab"><span>REVIEW</span></li>
+						<li class="resp-tab-item last" aria-controls="tab_item-3" role="tab"><span>OTHER</span></li>
+					</ul> 
+					<div class="resp-tabs-container">                                                        
+						<h2 class="resp-accordion resp-tab-active" role="tab" aria-controls="tab_item-0"><span class="resp-arrow"></span>OVERVIEW</h2><div class="resp-tab-content resp-tab-content-active" style="display:block" aria-labelledby="tab_item-0">
+							<p>Lorem ipsum dolor sit saelas met, consas ect tur ads ipi deese cing elit mauris fring illa. Lorem ipsum dolor sit saelas met, consas ect tur ads. Lorem ipsum dolor sit saelas met, consas ect. Lorem ipsum dolor sit saelas met, consas ect tur ads ipi deese cing elit mauris fring illa. Lorem ipsum dolor sit saelas met, consas ect tur ads. Lorem ipsum dolor sit saelas met, consas ect. Lorem ipsum dolor sit saelas met, consas ect tur ads ipi deese cing elit mauris fring illa. Lorem ipsum dolor sit saelas met, consas ect tur ads. Lorem ipsum dolor sit saelas met, consas ect. Lorem ipsum dolor sit saelas met, consas ect tur ads ipi deese cing elit mauris fring illa. Lorem ipsum dolor sit saelas met, consas ect tur ads. Lorem ipsum dolor sit saelas met, consas ect. Lorem ipsum dolor sit saelas met, consas ect tur ads ipi deese cing elit mauris fring illa. Lorem ipsum dolor sit saelas met, consas ect tur ads. Lorem ipsum dolor sit saelas met, consas ect. Lorem ipsum dolor sit saelas met, consas ect tur ads ipi deese cing elit mauris fring illa. Lorem ipsum dolor sit saelas met, consas ect tur ads. Lorem ipsum dolor sit saelas met, consas ect...</p>
+							<p>
+								Check - In Time: <span>12:00 am</span><br>
+								Check - Out Time: <span>02:00 pm</span>
+							</p>
+							<p>
+								No.36 - Nguyen Chi Thanh - Dong Da, Hanoi, Vietnam<br>
+								<a href="http://travelbookingtemplate.free.bg/+844936682236" title="phone">(+844) 93 668 2236</a><br>
+								<a href="http://www.sheratonvietnam.com/" target="_blank" title="website">www.sheratonvietnam.com</a>
+							</p>
+						</div><!-- /overview -->
+						<h2 class="resp-accordion" role="tab" aria-controls="tab_item-1"><span class="resp-arrow"></span>FACILITIES</h2><div class="resp-tab-content" aria-labelledby="tab_item-1">
+							<h6>FACILITIES</h6>
+							<div class="row">
+								<div class="col-sm-4 col-xs-12 clearfix"><div class="customCheck styledCheckbox" style="background-image: url(&quot;assets/images/checkbox.png' %}&quot;); width: 15px; height: 13px; cursor: pointer; background-position: 0px -26px;"><input type="checkbox" class="customCheck" name="room" value="Wifi" disabled="disabled" style="display: none;"></div> <span>Wifi</span></div><!-- /col -->
+								<div class="col-sm-4 col-xs-12 clearfix"><div class="customCheck styledCheckbox" style="background-image: url(&quot;assets/images/checkbox.png' %}&quot;); width: 15px; height: 13px; cursor: pointer; background-position: 0px -39px;"><input type="checkbox" class="customCheck" name="facilities" value="Wifi" disabled="disabled" checked="" style="display: none;"></div> <span>Wifi</span></div><!-- /col -->
+								<div class="col-sm-4 col-xs-12 clearfix"><div class="customCheck styledCheckbox" style="background-image: url(&quot;assets/images/checkbox.png' %}&quot;); width: 15px; height: 13px; cursor: pointer; background-position: 0px -26px;"><input type="checkbox" class="customCheck" name="facilities" value="Wifi" disabled="disabled" style="display: none;"></div> <span>Wifi</span></div><!-- /col -->
+								<div class="col-sm-4 col-xs-12 clearfix"><div class="customCheck styledCheckbox" style="background-image: url(&quot;assets/images/checkbox.png' %}&quot;); width: 15px; height: 13px; cursor: pointer; background-position: 0px -26px;"><input type="checkbox" class="customCheck" name="facilities" value="Beachfront" disabled="disabled" style="display: none;"></div> <span>Beachfront</span></div><!-- /col -->
+								<div class="col-sm-4 col-xs-12 clearfix"><div class="customCheck styledCheckbox" style="background-image: url(&quot;assets/images/checkbox.png' %}&quot;); width: 15px; height: 13px; cursor: pointer; background-position: 0px -26px;"><input type="checkbox" class="customCheck" name="facilities" value="Taxi &amp; Car hire" disabled="disabled" style="display: none;"></div> <span>Taxi &amp; Car hire</span></div><!-- /col -->
+								<div class="col-sm-4 col-xs-12 clearfix"><div class="customCheck styledCheckbox" style="background-image: url(&quot;assets/images/checkbox.png' %}&quot;); width: 15px; height: 13px; cursor: pointer; background-position: 0px -26px;"><input type="checkbox" class="customCheck" name="facilities" value="Beachfront" disabled="disabled" style="display: none;"></div> <span>Beachfront</span></div><!-- /col -->
+								<div class="col-sm-4 col-xs-12 clearfix"><div class="customCheck styledCheckbox" style="background-image: url(&quot;assets/images/checkbox.png' %}&quot;); width: 15px; height: 13px; cursor: pointer; background-position: 0px -39px;"><input type="checkbox" class="customCheck" name="facilities" value="Hospital" disabled="disabled" checked="" style="display: none;"></div> <span>Hospital</span></div><!-- /col -->
+								<div class="col-sm-4 col-xs-12 clearfix"><div class="customCheck styledCheckbox" style="background-image: url(&quot;assets/images/checkbox.png' %}&quot;); width: 15px; height: 13px; cursor: pointer; background-position: 0px -26px;"><input type="checkbox" class="customCheck" name="facilities" value="Hospital" disabled="disabled" style="display: none;"></div> <span>Hospital</span></div><!-- /col -->
+								<div class="col-sm-4 col-xs-12 clearfix"><div class="customCheck styledCheckbox" style="background-image: url(&quot;assets/images/checkbox.png' %}&quot;); width: 15px; height: 13px; cursor: pointer; background-position: 0px -26px;"><input type="checkbox" class="customCheck" name="facilities" value="Hospital" disabled="disabled" style="display: none;"></div> <span>Hospital</span></div><!-- /col -->
+								<div class="col-sm-4 col-xs-12 clearfix"><div class="customCheck styledCheckbox" style="background-image: url(&quot;assets/images/checkbox.png' %}&quot;); width: 15px; height: 13px; cursor: pointer; background-position: 0px -26px;"><input type="checkbox" class="customCheck" name="facilities" value="Flight" disabled="disabled" style="display: none;"></div> <span>Flight</span></div><!-- /col -->
+								<div class="col-sm-4 col-xs-12 clearfix"><div class="customCheck styledCheckbox" style="background-image: url(&quot;assets/images/checkbox.png' %}&quot;); width: 15px; height: 13px; cursor: pointer; background-position: 0px -26px;"><input type="checkbox" class="customCheck" name="facilities" value="Flight" disabled="disabled" style="display: none;"></div> <span>Flight</span></div><!-- /col -->
+								<div class="col-sm-4 col-xs-12 clearfix"><div class="customCheck styledCheckbox" style="background-image: url(&quot;assets/images/checkbox.png' %}&quot;); width: 15px; height: 13px; cursor: pointer; background-position: 0px -39px;"><input type="checkbox" class="customCheck" name="facilities" value="Flight" disabled="disabled" checked="" style="display: none;"></div> <span>Flight</span></div><!-- /col -->
+							</div><!-- /row -->
+							<h6>ACTIVITES</h6>
+							<p>Lorem ipsum dolor sit saelas met, consas ect tur ads ipi deese cing elit mauris fring illa. Lorem ipsum dolor sit saelas met, consas ect tur ads. Lorem ipsum dolor sit saelas met, consas ect. Lorem ipsum dolor sit saelas met, consas ect tur ads ipi deese cing elit mauris fring illa. Lorem ipsum dolor sit saelas met, consas ect tur ads. Lorem ipsum dolor sit saelas met, consas ect. Lorem ipsum dolor sit saelas met, consas ect tur ads ipi deese cing elit mauris fring illa. Lorem ipsum dolor sit saelas met, consas ect tur ads. Lorem ipsum dolor sit saelas met, consas ect. Lorem ipsum dolor sit saelas met, consas ect tur ads ipi deese cing elit mauris fring illa. Lorem ipsum dolor sit saelas met, consas ect tur ads. Lorem ipsum dolor sit saelas met, consas ect. Lorem ipsum dolor sit saelas met, consas ect tur ads ipi deese cing elit mauris fring illa. Lorem ipsum dolor sit saelas met, consas ect tur ads....</p>
+						</div><!-- /facilities -->
+						<h2 class="resp-accordion" role="tab" aria-controls="tab_item-2"><span class="resp-arrow"></span>REVIEW</h2><div class="resp-tab-content" aria-labelledby="tab_item-2">
+							<div class="row">
+								<div class="col-sm-6">
+									<h6>YOUR RATING</h6>
+									<div class="borderBottom clearfix"><em>Clean</em> <div class="ratingBig" data-average="4" data-id="1" style="height: 20px; width: 115px; overflow: hidden; z-index: 1; position: relative;"><div class="jRatingColor" style="width: 92px;"></div><div class="jRatingAverage" style="width: 0px; top: -20px;"></div><div class="jStar" style="width: 115px; height: 20px; top: -40px; background: url(&quot;assets/images/rating-stars.png' %}&quot;) repeat-x;"></div></div></div>
+									<div class="borderBottom clearfix"><em>Location</em> <div class="ratingBig" data-average="3" data-id="1" style="height: 20px; width: 115px; overflow: hidden; z-index: 1; position: relative;"><div class="jRatingColor" style="width: 69px;"></div><div class="jRatingAverage" style="width: 0px; top: -20px;"></div><div class="jStar" style="width: 115px; height: 20px; top: -40px; background: url(&quot;assets/images/rating-stars.png' %}&quot;) repeat-x;"></div></div></div>
+									<div class="borderBottom clearfix"><em>Staff</em> <div class="ratingBig" data-average="2" data-id="1" style="height: 20px; width: 115px; overflow: hidden; z-index: 1; position: relative;"><div class="jRatingColor" style="width: 46px;"></div><div class="jRatingAverage" style="width: 0px; top: -20px;"></div><div class="jStar" style="width: 115px; height: 20px; top: -40px; background: url(&quot;assets/images/rating-stars.png' %}&quot;) repeat-x;"></div></div></div>
+									<div class="borderBottom clearfix"><em>Service</em> <div class="ratingBig" data-average="4" data-id="1" style="height: 20px; width: 115px; overflow: hidden; z-index: 1; position: relative;"><div class="jRatingColor" style="width: 92px;"></div><div class="jRatingAverage" style="width: 0px; top: -20px;"></div><div class="jStar" style="width: 115px; height: 20px; top: -40px; background: url(&quot;assets/images/rating-stars.png' %}&quot;) repeat-x;"></div></div></div>
+									<div class="borderBottom borderBottom0 clearfix"><em>Comfort</em> <div class="ratingBig" data-average="5" data-id="1" style="height: 20px; width: 115px; overflow: hidden; z-index: 1; position: relative;"><div class="jRatingColor" style="width: 115px;"></div><div class="jRatingAverage" style="width: 0px; top: -20px;"></div><div class="jStar" style="width: 115px; height: 20px; top: -40px; background: url(&quot;assets/images/rating-stars.png' %}&quot;) repeat-x;"></div></div></div>
+									<p class="aveRate clearfix"><span>4/5</span> <em>Lorem ipsum dolor sit amet, conse ctetur adipiscing elit Aliquam.</em></p>
+								</div><!-- /col -->
+								<div class="col-sm-6">
+									<h6>COMMENTS</h6>
+									<div class="comment">
+										<div class="clearfix">
+											<span>Michael Lee</span><em>06 / Apr / 2012</em>
+										</div>
+										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam suscipit nisl in est consectetur.</p>
+									</div><!-- /comment -->
+									<div class="comment">
+										<div class="clearfix">
+											<span>Tom Henrry</span><em>03 / Apr / 2012</em>
+										</div>
+										<p>Lorem ipsum dolor sit amet, consectetur adipiscin.</p>
+									</div><!-- /comment -->
+									<div class="comment">
+										<div class="clearfix">
+											<span>Michael Lee</span><em>06 / Apr / 2012</em>
+										</div>
+										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam suscipit nisl in est consectetur.</p>
+									</div><!-- /comment -->
+									<div class="comment">
+										<div class="clearfix">
+											<span>Tom Henrry</span><em>03 / Apr / 2012</em>
+										</div>
+										<p>Lorem ipsum dolor sit amet, consectetur adipiscin.</p>
+									</div><!-- /comment -->
+								</div><!-- /col -->
+							</div><!-- /row -->
+						</div><!-- /review -->
+						<h2 class="resp-accordion" role="tab" aria-controls="tab_item-3"><span class="resp-arrow"></span>OTHER</h2><div class="resp-tab-content" aria-labelledby="tab_item-3">
+							<p>Other</p>
+						</div><!-- /other -->
+					</div>
+				</div><!-- /detailTab -->
+			</div><!-- /col -->
+		</div><!-- /row -->
+		
+	</div><!-- /container -->
+	{% endblock content %}

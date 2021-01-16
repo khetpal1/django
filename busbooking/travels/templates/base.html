@@ -1,0 +1,225 @@
+{% load static %}
+
+<!DOCTYPE html>
+<!-- saved from url=(0048)# -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Basic Page Needs -->
+	
+    <title>The Travel Booking</title>
+   
+
+	<!-- Mobile Specific Metas -->
+   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">	
+	
+	<!-- styles -->
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/bootstrap-theme.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/layout.css' %}" rel="stylesheet">
+    <link href="{% static 'css/responsive.css' %}" rel="stylesheet">
+    <link href="{% static 'css/user_change.css' %}" rel="stylesheet">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]> <script src="assets/scripts/html5.js"></script> <![endif]-->
+
+    
+</head>
+<body>
+
+	<!-- HEADER ================================================== -->
+	<header>
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-4">
+					<div class="dropdownMenus clearfix">
+						<div class="dropdown language">
+						  <a class="dropTrigger" id="dLabelLang" data-toggle="dropdown" href="#"><img alt="language-en" src="{% static 'images/language-en.png' %}"><span>EN</span></a>
+						  <ul class="dropdown-menu" role="menu" aria-labelledby="dLabelLang">
+							<li class="first"><a class="clearfix" href="#" title="EN"><img alt="language-en" src="{% static 'images/language-en.png' %}"><span>EN</span></a></li>
+							<li><a class="clearfix" href="#" title="CH"><img alt="language-ch" src="{% static 'images/language-ch.png' %}"><span>CH</span></a></li>
+							<li><a class="clearfix" href="#" title="RU"><img alt="language-ru" src="{% static 'images/language-ru.png' %}"><span>RU</span></a></li>
+							<li class="last"><a class="clearfix" href="#" title="JP"><img alt="language-jp" src="{% static 'images/language-jp.png' %}"><span>JP</span></a></li>
+						  </ul>
+						</div><!-- /language -->
+						<div class="dropdown currency">
+						  <a class="dropTrigger" id="dLabelCur" data-toggle="dropdown" href="#">US</a>
+						  <ul class="dropdown-menu" role="menu" aria-labelledby="dLabelCur">
+							<li class="first"><a class="clearfix" href="#" title="US">US</a></li>
+							<li><a class="clearfix" href="#" title="EUR">EUR</a></li>
+							<li><a class="clearfix" href="#" title="STERLIN">STERLIN</a></li>
+							<li class="last"><a class="clearfix" href="#" title="YEN">YEN</a></li>
+						  </ul>
+						</div><!-- /currency -->
+					</div><!-- /clearfix -->
+					<div class="callUsTop">
+						<h4>CALL US TODAY</h4>
+						<span>Lorem ipsum dolor sit saelas: <a href="tel:84868868888" title="(84) - 868 868 888">(84) - 868 868 888</a></span>
+					</div><!-- /callUsTop -->
+				</div><!-- /col -->
+				
+				<div class="col-sm-8">
+					<div class="col-sm-8">
+						<div id="logo"><a href="#" title="Travel Booking"><img src="{% static 'images/logo.png' %}" alt="Travel Booking"></a></div>
+						<div class="topmenu clearfix">
+							<ul class="l_tinynav1">
+								<li class="first"><a href="#" title="About Us">About Us</a></li>
+								<li><a href="#" title="News">News</a></li>
+								<li><a href="#" title="Service">Service</a></li>
+								<li><a href="#" title="Recruiment">Recruiment</a></li>
+								<li><a href="#" title="Media">Media</a></li>
+								<li class="last"><a href="#" title="Support">Support</a></li>
+							</ul><select class="tinynav tinynav1"><option value="#">About Us</option><option value="#">News</option><option value="#">Service</option><option value="#">Recruiment</option><option value="#">Media</option><option value="#" selected="selected">Support</option></select>
+						</div><!-- /topmenu -->
+					</div><!-- /col -->
+					<div class="col-sm-4 clearfix">
+						<div class="fRight pRev">
+							<div class="topRightLinks clearfix">
+								<a class="login" href="#">Login</a>
+								<a class="register" href="{% url 'people:register'  %}">Register</a>
+							</div>
+							<div class="social clearfix">
+								<ul>
+									<li class="first"><a class="rss" href="#">RSS</a></li>
+									<li><a class="twitter" href="#">Twitter</a></li>
+									<li class="last"><a class="facebook" href="#">Facebook</a></li>
+								</ul>
+							</div><!-- /topSocial -->
+							<form id="topSearch" class="clearfix" action="#" method="post">
+								<input type="text" name="keyword">
+								<input type="submit" name="submit">
+							</form><!-- /topSearch -->
+						</div><!-- /fRight -->
+					</div><!-- /col -->
+				</div><!-- /col -->
+			</div><!-- /row -->
+		</div><!-- /container -->
+	</header><!-- /header -->
+	
+	
+	<!-- MAIN MENU ================================================== -->
+	<div class="mainMenuContainer">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12">
+					<div class="mainMenu clearfix">
+						<em class="mobDropdown">Home</em>
+						<ul>
+							<li class="active first"><a href="#" title="Home">Home</a></li>
+							<li><a href="#" title="Hotels">Hotels</a></li>
+							<li><a href="#" title="Holidays">Holidays</a></li>
+							<li><a href="#" title="Flights">Flights</a></li>
+							<li><a href="#" title="Cars">Cars</a></li>
+							<li><a href="#" title="Vacations">Vacations</a></li>
+							<li><a href="#" title="Guide Book">Guide Book</a></li>
+							<li><a href="#" title="Hot Deals">Hot Deals</a></li>
+							<li><a href="#" title="Cruise">Cruise</a></li>
+							<li class="last"><a href="#" title="Promotion">Promotion</a></li>
+						</ul>
+					</div><!-- /mainMenu -->
+				</div><!-- /col -->
+			</div><!-- /row -->
+		</div><!-- /container -->
+	</div><!-- /mainMenuContainer -->
+	
+	
+	{% block content %}
+
+	{% endblock content %}
+	
+	<!-- FOOTER ================================================== -->
+	<div id="footer">
+		<div class="footerTop">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-3"><a class="logoBottom" href="#" title=""><img src="{% static 'images/logo-bottom.png' %}" alt="logo"></a></div>
+					<div class="col-sm-3">
+						<h5>Contact <span>Info</span></h5>
+						<p>No. 08, Nguyen Trai, Hanoi , Vietnam</p>
+						<p>Call Us: <a href="tel:08419001008" title="Call Us">(084) 1900 1008</a></p>
+						<p>Email: <a href="mailto:michael@leebros.us" title="Email us">michael@leebros.us</a></p>
+					</div>
+					<div class="col-sm-3">
+						<h5>Customer <span>Support</span></h5>
+						<div class="footerLinkList">
+							<ul>
+								<li class="first"><a href="#" title="FAQ">FAQ</a></li>
+								<li><a href="#" title="Payment Option">Payment Option</a></li>
+								<li><a href="#" title="Booking Tips">Booking Tips</a></li>
+								<li class="last"><a href="#" title="Infomation">Infomation</a></li>
+							</ul>
+						</div><!-- /footerLinkList -->
+					</div>
+					<div class="col-sm-3">
+						<h5>Get Our <span>Newsletter</span></h5>
+						<p>Lorem ipsum dolor ipsum dolor.</p>
+						<form id="newsletter" class="clearfix" action="#" method="post">
+							<input type="text" name="email" class="required email" value="Your Email...">
+							<input type="submit" name="send" value="SIGNUP">
+						</form>
+						<div class="loader"></div>
+					</div>
+				</div><!-- /row -->
+			</div><!-- /container -->
+		</div><!-- /footerTop -->
+		<div class="footerBottom">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-6">
+						<div class="footerMenu clearfix">
+							<ul>
+								<li class="first"><a href="#" title="About Us">About Us</a></li>
+								<li><a href="#" title="News">News</a></li>
+								<li><a href="#" title="Service">Service</a></li>
+								<li><a href="#" title="Recruiment">Recruiment</a></li>
+								<li><a href="#" title="Media">Media</a></li>
+								<li class="last"><a href="#" title="Support">Support</a></li>
+							</ul>
+						</div><!-- /footerMenu -->
+					</div>
+					<div class="col-sm-6">
+						<div class="copy">Copyright © 2013. Designed by <span>Michael Lee</span>. All rights reseved.</div><!-- /copy -->
+					</div>
+				</div><!-- /row -->
+			</div><!-- /container -->
+		</div><!-- /footerBottom -->
+	</div><!-- /footer -->
+	
+	
+	<!-- modal content -->
+	<div id="loginModal">
+		<h6>LOGIN FORM</h6>
+		<form id="loginForm" class="generalForm" novalidate="novalidate">
+			<input class="loginName required" type="text" value="Username" name="loginName">
+			<input class="loginPass required" type="password" value="Password" name="loginPass">
+			<div class="loginInner clearfix">
+				<input type="submit" value="LOG IN">
+				<input type="checkbox" checked="" class="required"><span>Remember Me?</span>
+			</div>
+		</form>
+		<a href="#" title="Lost Your Password?">Lost Your Passoword?</a>
+		<div class="loaderImg"></div>
+	</div>
+		
+		
+	
+
+	<!-- JAVASRICPTS
+	================================================== -->
+	<script src="{% static 'js/jquery-1.8.2.min.js' %}"></script>
+	<script src="{% static 'js/bootstrap.min.js' %}"></script>
+	<script src="{% static 'js/respond.min.js' %}"></script>
+	<script src="{% static 'js/jquery.easing.1.3.js' %}"></script>
+	<script src="{% static 'js/jquery.touchSwipe.min.js' %}"></script>
+	<script src="{% static 'js/responsiveslides.min.js' %}"></script>
+	<script src="{% static 'js/jquery-tinyNav.js' %}"></script>
+	<script src="{% static 'js/easyResponsiveTabs.js' %}"></script>
+	<script src="{% static 'js/jquery-validation.js' %}"></script>
+	<script src="{% static 'js/jquery.datepick.min.js' %}"></script>
+	<script src="{% static 'js/jquery.customSelect.min.js' %}"></script>
+	<script src="{% static 'js/owl.carousel.min.js' %}"></script>
+	<script src="{% static 'js/jquery.simplemodal.js' %}"></script>
+	<script src="{% static 'js/jRating.jquery.js' %}"></script>
+	<script src="{% static 'js/jquery.screwdefaultbuttonsV2.min.js' %}"></script>
+	<script src="{% static 'js/global.js' %}"></script>
+
+
+</body></html>

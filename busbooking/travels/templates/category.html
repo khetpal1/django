@@ -1,0 +1,406 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+	
+	{% block content %}
+	<!-- MAIN CONTENT ================================================== -->
+	<div class="container">
+		
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="breadcrumb clearfix">
+					<ul>
+						<li class="first"><a href="#" title="Home">Home</a></li>
+						<li>/</li>
+						<li class="active last">Vacations Lists</li>
+					</ul>
+				</div><!-- /breadcrumb -->
+			</div><!-- /col -->
+		</div><!-- /row -->
+		
+		<div class="row">
+			<!-- SIDEBAR ================================================== -->
+			<div class="col-sm-3">
+				<div class="vacationFilterContainer">
+					<div class="filter">
+						<h5 class="active">CATEGORIES</h5>
+						<div class="filterInner" style="display: block;">
+							<div class="linkList">
+								<ul>
+									<li class="first"><a href="#" title="FAQ">FAQ</a></li>
+									<li><a href="#" title="Payment Option">Payment Option</a></li>
+									<li><a href="#" title="Booking Tips">Booking Tips</a></li>
+									<li class="last"><a href="#" title="Infomation">Infomation</a></li>
+								</ul>
+							</div><!-- /linkList -->
+						</div><!-- /filterInner -->
+					</div><!-- /filter -->
+					
+					<div class="filter">
+						<h5 class="active">PRICE</h5>
+						<div class="filterInner" style="display: block;">
+							<div class="row">
+								<form class="generalForm clearfix" id="priceFilter" action="#" method="post">
+									<div class="col col-sm-12 col-md-12 col-lg-4 clearfix">
+										<label>$</label><input type="text" name="minprice">
+									</div><!-- /col -->
+									<div class="col col-sm-12 col-md-12 col-lg-4 clearfix">
+										<span>-</span><label>$</label><input type="text" name="maxprice">
+									</div><!-- /col -->
+									<div class="col col-sm-12 col-md-12 col-lg-2 clearfix">
+										<input type="submit" name="submit" value="GO">
+									</div><!-- /col -->
+								</form>
+							</div><!-- /row -->
+						</div><!-- /filterInner -->
+					</div><!-- /filter -->
+					
+					<div class="filter">
+						<h5 class="active">STARS RATING</h5>
+						<div class="filterInner" style="display: block;">
+							<div class="ratingBasic" data-average="3" data-id="1" style="height: 20px; width: 115px; overflow: hidden; z-index: 1; position: relative;"><div class="jRatingColor" style="width: 69px;"></div><div class="jRatingAverage" style="width: 0px; top: -20px;"></div><div class="jStar" style="width: 115px; height: 20px; top: -40px; background: url(&quot;assets/images/rating-stars.png' %}&quot;) repeat-x;"></div></div>
+						</div><!-- /filterInner -->
+					</div><!-- /filter -->
+					
+					<div class="filter">
+						<h5 class="active">HOTEL FACILITIES</h5>
+						<div class="filterInner" style="display: block;">
+							<div class="col-sm-12 checkFilter clearfix"><div class="customCheck styledCheckbox" style="background-image: url(&quot;assets/images/checkbox.png' %}&quot;); width: 15px; height: 13px; cursor: pointer; background-position: 0px 0px;"><input type="checkbox" class="customCheck" name="hotel_facilities" value="FAQ" style="display: none;"></div> <span>FAQ</span></div><!-- /col -->
+							<div class="col-sm-12 checkFilter clearfix"><div class="customCheck styledCheckbox" style="background-image: url(&quot;assets/images/checkbox.png' %}&quot;); width: 15px; height: 13px; cursor: pointer; background-position: 0px 0px;"><input type="checkbox" class="customCheck" name="hotel_facilities" value="Payment Option" style="display: none;"></div> <span>Payment Option</span></div><!-- /col -->
+							<div class="col-sm-12 checkFilter clearfix"><div class="customCheck styledCheckbox" style="background-image: url(&quot;assets/images/checkbox.png' %}&quot;); width: 15px; height: 13px; cursor: pointer; background-position: 0px 0px;"><input type="checkbox" class="customCheck" name="hotel_facilities" value="Booking Tips" style="display: none;"></div> <span>Booking Tips</span></div><!-- /col -->
+							<div class="col-sm-12 checkFilter clearfix"><div class="customCheck styledCheckbox" style="background-image: url(&quot;assets/images/checkbox.png' %}&quot;); width: 15px; height: 13px; cursor: pointer; background-position: 0px 0px;"><input type="checkbox" class="customCheck" name="hotel_facilities" value="Infomation" style="display: none;"></div> <span>Infomation</span></div><!-- /col -->
+						</div><!-- /filterInner -->
+					</div><!-- /filter -->
+					
+					<div class="filter">
+						<h5 class="active">ROOM FACILITIES</h5>
+						<div class="filterInner" style="display: block;">
+							<div class="col-sm-12 checkFilter clearfix"><div class="customCheck styledCheckbox" style="background-image: url(&quot;assets/images/checkbox.png' %}&quot;); width: 15px; height: 13px; cursor: pointer; background-position: 0px 0px;"><input type="checkbox" class="customCheck" name="hotel_facilities" value="FAQ" style="display: none;"></div> <span>FAQ</span></div><!-- /col -->
+							<div class="col-sm-12 checkFilter clearfix"><div class="customCheck styledCheckbox" style="background-image: url(&quot;assets/images/checkbox.png' %}&quot;); width: 15px; height: 13px; cursor: pointer; background-position: 0px 0px;"><input type="checkbox" class="customCheck" name="hotel_facilities" value="Payment Option" style="display: none;"></div> <span>Payment Option</span></div><!-- /col -->
+							<div class="col-sm-12 checkFilter clearfix"><div class="customCheck styledCheckbox" style="background-image: url(&quot;assets/images/checkbox.png' %}&quot;); width: 15px; height: 13px; cursor: pointer; background-position: 0px 0px;"><input type="checkbox" class="customCheck" name="hotel_facilities" value="Booking Tips" style="display: none;"></div> <span>Booking Tips</span></div><!-- /col -->
+							<div class="col-sm-12 checkFilter clearfix"><div class="customCheck styledCheckbox" style="background-image: url(&quot;assets/images/checkbox.png' %}&quot;); width: 15px; height: 13px; cursor: pointer; background-position: 0px 0px;"><input type="checkbox" class="customCheck" name="hotel_facilities" value="Infomation" style="display: none;"></div> <span>Infomation</span></div><!-- /col -->
+						</div><!-- /filterInner -->
+					</div><!-- /filter -->
+					
+					<div class="filter">
+						<h5>OTHER</h5>
+						<div class="filterInner">
+							<p>OTHER</p>
+						</div><!-- /filterInner -->
+					</div><!-- /filter -->
+					
+					<div class="filter">
+						<h5>OTHER</h5>
+						<div class="filterInner">
+							<p>OTHER</p>
+						</div><!-- /filterInner -->
+					</div><!-- /filter -->
+				</div><!-- /vacationFilterContainer -->
+			</div><!-- /col -->
+			<!-- VACATIONS ================================================== -->
+			<div class="col-sm-9">
+				<div class="row listHead">
+					<div class="col-md-7 col-sm-12"><div class="show">SHOWING <span>09</span> PAGE OF <span>12</span></div></div><!-- /col -->
+					<div class="col-md-5 col-sm-12">
+						<div class="row">
+							<div class="col-sm-7">
+								<span class="fLeft sortTitle">SORT:</span>
+								<div class="dropdownFilter">
+									<em class="clearfix"><span>Default</span><i></i></em>
+									<ul>
+										<li class="first">Option 1</li>
+										<li>Option 2</li>
+										<li>Option 3</li>
+										<li class="last">Option 4</li>
+									</ul>
+								</div>
+							</div><!-- /col -->
+							<div class="col-sm-5">
+								<div class="fRight">
+									<span class="listLayout">List layout</span>
+									<span class="gridLayout active">Grid layout</span>
+								</div>
+							</div><!-- /col -->
+						</div><!-- /row -->
+					</div><!-- /col -->
+				</div><!-- /listHead -->
+				
+				<div class="featuredOffers offers offersGrid clearfix">
+					<div class="col-sm-4">
+						<a href="#" class="item">
+							<img src="{% static 'images/ft-offer-1.png' %}" alt="special offer">
+							<div class="offerInfo">
+								<div class="reviews clearfix">
+									<div class="ratingDisabled" data-average="3" data-id="1" style="height: 10px; width: 60px; overflow: hidden; z-index: 1; position: relative;"><div class="jRatingColor" style="width: 36px;"></div><div class="jRatingAverage" style="width: 0px; top: -10px;"></div><div class="jStar" style="width: 60px; height: 10px; top: -20px; background: url(&quot;assets/images/rating-small.png' %}&quot;) repeat-x;"></div></div>
+									<em>12 Reviews</em>
+								</div>
+								<p>Lorem ipsum dolor sit saelas met, consas ec tur ads ipi deese cing elit mauris fring illa...</p>
+							</div>
+							<span>MALAWI NATIONAL PARK</span>
+							<div class="priceTag"><em>Fr</em> $350</div>
+						</a>
+					</div><!-- /col -->
+					<div class="col-sm-4">
+						<a href="#" class="item">
+							<img src="{% static 'images/ft-offer-2.png' %}" alt="special offer">
+							<div class="offerInfo">
+								<div class="reviews clearfix">
+									<div class="ratingDisabled" data-average="3" data-id="1" style="height: 10px; width: 60px; overflow: hidden; z-index: 1; position: relative;"><div class="jRatingColor" style="width: 36px;"></div><div class="jRatingAverage" style="width: 0px; top: -10px;"></div><div class="jStar" style="width: 60px; height: 10px; top: -20px; background: url(&quot;assets/images/rating-small.png' %}&quot;) repeat-x;"></div></div>
+									<em>12 Reviews</em>
+								</div>
+								<p>Lorem ipsum dolor sit saelas met, consas ec tur ads ipi deese cing elit mauris fring illa...</p>
+							</div>
+							<span>MALAWI NATIONAL PARK</span>
+							<div class="priceTag"><em>Fr</em> $350</div>
+						</a>
+					</div><!-- /col -->
+					<div class="col-sm-4">
+						<a href="#" class="item">
+							<img src="{% static 'images/ft-offer-3.png' %}" alt="special offer">
+							<div class="offerInfo">
+								<div class="reviews clearfix">
+									<div class="ratingDisabled" data-average="3" data-id="1" style="height: 10px; width: 60px; overflow: hidden; z-index: 1; position: relative;"><div class="jRatingColor" style="width: 36px;"></div><div class="jRatingAverage" style="width: 0px; top: -10px;"></div><div class="jStar" style="width: 60px; height: 10px; top: -20px; background: url(&quot;assets/images/rating-small.png' %}&quot;) repeat-x;"></div></div>
+									<em>12 Reviews</em>
+								</div>
+								<p>Lorem ipsum dolor sit saelas met, consas ec tur ads ipi deese cing elit mauris fring illa...</p>
+							</div>
+							<span>MALAWI NATIONAL PARK</span>
+							<div class="priceTag"><em>Fr</em> $350</div>
+						</a>
+					</div><!-- /col -->
+					<div class="col-sm-4">
+						<a href="#" class="item">
+							<img src="{% static 'images/ft-offer-4.png' %}" alt="special offer">
+							<div class="offerInfo">
+								<div class="reviews clearfix">
+									<div class="ratingDisabled" data-average="3" data-id="1" style="height: 10px; width: 60px; overflow: hidden; z-index: 1; position: relative;"><div class="jRatingColor" style="width: 36px;"></div><div class="jRatingAverage" style="width: 0px; top: -10px;"></div><div class="jStar" style="width: 60px; height: 10px; top: -20px; background: url(&quot;assets/images/rating-small.png' %}&quot;) repeat-x;"></div></div>
+									<em>12 Reviews</em>
+								</div>
+								<p>Lorem ipsum dolor sit saelas met, consas ec tur ads ipi deese cing elit mauris fring illa...</p>
+							</div>
+							<span>MALAWI NATIONAL PARK</span>
+							<div class="priceTag"><em>Fr</em> $350</div>
+						</a>
+					</div><!-- /col -->
+					<div class="col-sm-4">
+						<a href="#" class="item">
+							<img src="{% static 'images/ft-offer-5.png' %}" alt="special offer">
+							<div class="offerInfo">
+								<div class="reviews clearfix">
+									<div class="ratingDisabled" data-average="3" data-id="1" style="height: 10px; width: 60px; overflow: hidden; z-index: 1; position: relative;"><div class="jRatingColor" style="width: 36px;"></div><div class="jRatingAverage" style="width: 0px; top: -10px;"></div><div class="jStar" style="width: 60px; height: 10px; top: -20px; background: url(&quot;assets/images/rating-small.png' %}&quot;) repeat-x;"></div></div>
+									<em>12 Reviews</em>
+								</div>
+								<p>Lorem ipsum dolor sit saelas met, consas ec tur ads ipi deese cing elit mauris fring illa...</p>
+							</div>
+							<span>MALAWI NATIONAL PARK</span>
+							<div class="priceTag"><em>Fr</em> $350</div>
+						</a>
+					</div><!-- /col -->
+					<div class="col-sm-4">
+						<a href="#" class="item">
+							<img src="{% static 'images/ft-offer-6.png' %}" alt="special offer">
+							<div class="offerInfo">
+								<div class="reviews clearfix">
+									<div class="ratingDisabled" data-average="3" data-id="1" style="height: 10px; width: 60px; overflow: hidden; z-index: 1; position: relative;"><div class="jRatingColor" style="width: 36px;"></div><div class="jRatingAverage" style="width: 0px; top: -10px;"></div><div class="jStar" style="width: 60px; height: 10px; top: -20px; background: url(&quot;assets/images/rating-small.png' %}&quot;) repeat-x;"></div></div>
+									<em>12 Reviews</em>
+								</div>
+								<p>Lorem ipsum dolor sit saelas met, consas ec tur ads ipi deese cing elit mauris fring illa...</p>
+							</div>
+							<span>MALAWI NATIONAL PARK</span>
+							<div class="priceTag"><em>Fr</em> $350</div>
+						</a>
+					</div><!-- /col -->
+					<div class="col-sm-4">
+						<a href="#" class="item">
+							<img src="{% static 'images/ft-offer-1.png' %}" alt="special offer">
+							<div class="offerInfo">
+								<div class="reviews clearfix">
+									<div class="ratingDisabled" data-average="3" data-id="1" style="height: 10px; width: 60px; overflow: hidden; z-index: 1; position: relative;"><div class="jRatingColor" style="width: 36px;"></div><div class="jRatingAverage" style="width: 0px; top: -10px;"></div><div class="jStar" style="width: 60px; height: 10px; top: -20px; background: url(&quot;assets/images/rating-small.png' %}&quot;) repeat-x;"></div></div>
+									<em>12 Reviews</em>
+								</div>
+								<p>Lorem ipsum dolor sit saelas met, consas ec tur ads ipi deese cing elit mauris fring illa...</p>
+							</div>
+							<span>MALAWI NATIONAL PARK</span>
+							<div class="priceTag"><em>Fr</em> $350</div>
+						</a>
+					</div><!-- /col -->
+					<div class="col-sm-4">
+						<a href="#" class="item">
+							<img src="{% static 'images/ft-offer-2.png' %}" alt="special offer">
+							<div class="offerInfo">
+								<div class="reviews clearfix">
+									<div class="ratingDisabled" data-average="3" data-id="1" style="height: 10px; width: 60px; overflow: hidden; z-index: 1; position: relative;"><div class="jRatingColor" style="width: 36px;"></div><div class="jRatingAverage" style="width: 0px; top: -10px;"></div><div class="jStar" style="width: 60px; height: 10px; top: -20px; background: url(&quot;assets/images/rating-small.png' %}&quot;) repeat-x;"></div></div>
+									<em>12 Reviews</em>
+								</div>
+								<p>Lorem ipsum dolor sit saelas met, consas ec tur ads ipi deese cing elit mauris fring illa...</p>
+							</div>
+							<span>MALAWI NATIONAL PARK</span>
+							<div class="priceTag"><em>Fr</em> $350</div>
+						</a>
+					</div><!-- /col -->
+					<div class="col-sm-4">
+						<a href="#" class="item">
+							<img src="{% static 'images/ft-offer-3.png' %}" alt="special offer">
+							<div class="offerInfo">
+								<div class="reviews clearfix">
+									<div class="ratingDisabled" data-average="3" data-id="1" style="height: 10px; width: 60px; overflow: hidden; z-index: 1; position: relative;"><div class="jRatingColor" style="width: 36px;"></div><div class="jRatingAverage" style="width: 0px; top: -10px;"></div><div class="jStar" style="width: 60px; height: 10px; top: -20px; background: url(&quot;assets/images/rating-small.png' %}&quot;) repeat-x;"></div></div>
+									<em>12 Reviews</em>
+								</div>
+								<p>Lorem ipsum dolor sit saelas met, consas ec tur ads ipi deese cing elit mauris fring illa...</p>
+							</div>
+							<span>MALAWI NATIONAL PARK</span>
+							<div class="priceTag"><em>Fr</em> $350</div>
+						</a>
+					</div><!-- /col -->
+				</div><!-- /featuredOffers -->
+				
+				<div class="featuredOffers offers offersList clearfix">
+					<div class="col-sm-12">
+						<div class="item row clearfix">
+							<div class="col-sm-4"><img src="{% static 'images/offer-list-1.png' %}" alt="special offer"></div>
+							<div class="col-sm-8">
+								<div class="offerInfo">
+									<h6>MALAWI NATIONAL PARK</h6>
+									<div class="reviews clearfix">
+										<div class="ratingDisabled" data-average="3" data-id="1" style="height: 10px; width: 60px; overflow: hidden; z-index: 1; position: relative;"><div class="jRatingColor" style="width: 36px;"></div><div class="jRatingAverage" style="width: 0px; top: -10px;"></div><div class="jStar" style="width: 60px; height: 10px; top: -20px; background: url(&quot;assets/images/rating-small.png' %}&quot;) repeat-x;"></div></div>
+										<em>12 Reviews</em>
+									</div>
+									<p>Lorem ipsum dolor sit saelas met, consas ect tur ads ipi deese cing elit mauris fring illa. Lorem ipsum dolor sit saelas met, consas ect tur ads. Lorem ipsum dolor sit saelas met, consas ect...</p>
+									<span class="map">Malawi National Park</span>
+									<a class="more" href="#" title="MALAWI NATIONAL PARK">View more info</a>
+								</div>
+								<div class="priceTag"><em>Fr</em> $350</div>
+							</div>
+						</div>
+					</div><!-- /col -->
+					<div class="col-sm-12">
+						<div class="item row clearfix">
+							<div class="col-sm-4"><img src="{% static 'images/offer-list-2.png' %}" alt="special offer"></div>
+							<div class="col-sm-8">
+								<div class="offerInfo">
+									<h6>MALAWI NATIONAL PARK</h6>
+									<div class="reviews clearfix">
+										<div class="ratingDisabled" data-average="3" data-id="1" style="height: 10px; width: 60px; overflow: hidden; z-index: 1; position: relative;"><div class="jRatingColor" style="width: 36px;"></div><div class="jRatingAverage" style="width: 0px; top: -10px;"></div><div class="jStar" style="width: 60px; height: 10px; top: -20px; background: url(&quot;assets/images/rating-small.png' %}&quot;) repeat-x;"></div></div>
+										<em>12 Reviews</em>
+									</div>
+									<p>Lorem ipsum dolor sit saelas met, consas ect tur ads ipi deese cing elit mauris fring illa. Lorem ipsum dolor sit saelas met, consas ect tur ads. Lorem ipsum dolor sit saelas met, consas ect...</p>
+									<span class="map">Malawi National Park</span>
+									<a class="more" href="#" title="MALAWI NATIONAL PARK">View more info</a>
+								</div>
+								<div class="priceTag"><em>Fr</em> $350</div>
+							</div>
+						</div>
+					</div><!-- /col -->
+					<div class="col-sm-12">
+						<div class="item row clearfix">
+							<div class="col-sm-4"><img src="{% static 'images/offer-list-3.png' %}" alt="special offer"></div>
+							<div class="col-sm-8">
+								<div class="offerInfo">
+									<h6>MALAWI NATIONAL PARK</h6>
+									<div class="reviews clearfix">
+										<div class="ratingDisabled" data-average="3" data-id="1" style="height: 10px; width: 60px; overflow: hidden; z-index: 1; position: relative;"><div class="jRatingColor" style="width: 36px;"></div><div class="jRatingAverage" style="width: 0px; top: -10px;"></div><div class="jStar" style="width: 60px; height: 10px; top: -20px; background: url(&quot;assets/images/rating-small.png' %}&quot;) repeat-x;"></div></div>
+										<em>12 Reviews</em>
+									</div>
+									<p>Lorem ipsum dolor sit saelas met, consas ect tur ads ipi deese cing elit mauris fring illa. Lorem ipsum dolor sit saelas met, consas ect tur ads. Lorem ipsum dolor sit saelas met, consas ect...</p>
+									<span class="map">Malawi National Park</span>
+									<a class="more" href="#" title="MALAWI NATIONAL PARK">View more info</a>
+								</div>
+								<div class="priceTag"><em>Fr</em> $350</div>
+							</div>
+						</div>
+					</div><!-- /col -->
+					<div class="col-sm-12">
+						<div class="item row clearfix">
+							<div class="col-sm-4"><img src="{% static 'images/offer-list-4.png' %}" alt="special offer"></div>
+							<div class="col-sm-8">
+								<div class="offerInfo">
+									<h6>MALAWI NATIONAL PARK</h6>
+									<div class="reviews clearfix">
+										<div class="ratingDisabled" data-average="3" data-id="1" style="height: 10px; width: 60px; overflow: hidden; z-index: 1; position: relative;"><div class="jRatingColor" style="width: 36px;"></div><div class="jRatingAverage" style="width: 0px; top: -10px;"></div><div class="jStar" style="width: 60px; height: 10px; top: -20px; background: url(&quot;assets/images/rating-small.png' %}&quot;) repeat-x;"></div></div>
+										<em>12 Reviews</em>
+									</div>
+									<p>Lorem ipsum dolor sit saelas met, consas ect tur ads ipi deese cing elit mauris fring illa. Lorem ipsum dolor sit saelas met, consas ect tur ads. Lorem ipsum dolor sit saelas met, consas ect...</p>
+									<span class="map">Malawi National Park</span>
+									<a class="more" href="#" title="MALAWI NATIONAL PARK">View more info</a>
+								</div>
+								<div class="priceTag"><em>Fr</em> $350</div>
+							</div>
+						</div>
+					</div><!-- /col -->
+				</div><!-- /featuredOffers -->
+				
+				<div class="pager fRight">
+					<ul>
+						<li class="prev first"><a href="#" title="Previous">Previous</a></li>
+						<li><a href="#" title="1">1</a></li>
+						<li class="active"><a href="#" title="2">2</a></li>
+						<li><a href="#" title="3">3</a></li>
+						<li class="next last"><a href="#" title="Next">Next</a></li>
+					</ul>
+				</div><!-- /pager -->
+			</div><!-- /col -->
+		</div><!-- /row -->
+		
+	</div><!-- /container -->
+	
+	
+	<!-- FOOTER ================================================== -->
+	<div id="footer">
+		<div class="footerTop">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-3"><a class="logoBottom" href="#" title=""><img src="{% static 'images/logo-bottom.png' %}" alt="logo"></a></div>
+					<div class="col-sm-3">
+						<h5>Contact <span>Info</span></h5>
+						<p>No. 08, Nguyen Trai, Hanoi , Vietnam</p>
+						<p>Call Us: <a href="tel:08419001008" title="Call Us">(084) 1900 1008</a></p>
+						<p>Email: <a href="mailto:michael@leebros.us" title="Email us">michael@leebros.us</a></p>
+					</div>
+					<div class="col-sm-3">
+						<h5>Customer <span>Support</span></h5>
+						<div class="footerLinkList">
+							<ul>
+								<li class="first"><a href="#" title="FAQ">FAQ</a></li>
+								<li><a href="#" title="Payment Option">Payment Option</a></li>
+								<li><a href="#" title="Booking Tips">Booking Tips</a></li>
+								<li class="last"><a href="#" title="Infomation">Infomation</a></li>
+							</ul>
+						</div><!-- /footerLinkList -->
+					</div>
+					<div class="col-sm-3">
+						<h5>Get Our <span>Newsletter</span></h5>
+						<p>Lorem ipsum dolor ipsum dolor.</p>
+						<form id="newsletter" class="clearfix" action="#" method="post">
+							<input type="text" name="email" class="required email" value="Your Email...">
+							<input type="submit" name="send" value="SIGNUP">
+						</form>
+						<div class="loader"></div>
+					</div>
+				</div><!-- /row -->
+			</div><!-- /container -->
+		</div><!-- /footerTop -->
+		<div class="footerBottom">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-6">
+						<div class="footerMenu clearfix">
+							<ul>
+								<li class="first"><a href="#" title="About Us">About Us</a></li>
+								<li><a href="#" title="News">News</a></li>
+								<li><a href="#" title="Service">Service</a></li>
+								<li><a href="#" title="Recruiment">Recruiment</a></li>
+								<li><a href="#" title="Media">Media</a></li>
+								<li class="last"><a href="#" title="Support">Support</a></li>
+							</ul>
+						</div><!-- /footerMenu -->
+					</div>
+					<div class="col-sm-6">
+						<div class="copy">Copyright © 2013. Designed by <span>Michael Lee</span>. All rights reseved.</div><!-- /copy -->
+					</div>
+				</div><!-- /row -->
+			</div><!-- /container -->
+		</div><!-- /footerBottom -->
+	</div><!-- /footer -->
+	
+	{% endblock content %}

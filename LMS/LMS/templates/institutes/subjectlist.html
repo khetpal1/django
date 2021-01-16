@@ -7,16 +7,15 @@
     <title>Subject list</title>
   </head>
   <body>
-    hello
     {% block content %}
-    hello
+
     {% for i in subjects %}
-    {{i}}
-    <!-- <a href='{% url 'institute:subjectsinfo' i.id %}'> {{i }} </a>  <br> -->
-    <!-- {% for s in schedules %}
-    {{s}}
-    <!-- <a href='{% url 'institute:schedule' s.id %}'>schedule</a> <br> -->
-    <!-- {% endfor %} --> -->
+      {{i}}
+    <a href="{% url 'institute:subjectsinfo' i.id %}"> {{i }} </a>   <br>
+     {% for s in schedules %}
+    <!-- <!-- {{s}} -->
+    <a href='{% url 'institute:schedule' s.id %}'>schedule</a> <br>
+    {% endfor %}
 
     {% endfor %} 
  

@@ -4,7 +4,6 @@ from ...models import Tenant
 
 class Command(MigrationCommand):
   def handle(self, *args, **option):
-    
     with connection.cursor() as cursor:
       schemas=Tenant.objects.all()
       for schema in schemas:
